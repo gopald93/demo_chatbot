@@ -1,0 +1,38 @@
+{% extends 'Admin/Admin_base.html' %}
+{% block title %}All Message activities{% endblock %}
+{% block stylesheet %}
+{% endblock stylesheet %}
+{% block content %}
+<div class="">
+      <div class="row">
+        <div class="col-sm" style="float: left; margin-top: 32px; height: 300px; width: 200px; background-color: white; padding: 27px; border-radius: 17px; border: 7px solid whitesmoke;">
+          <h2><b>Google Dialogue Flow</b></h2>
+          <a href="{% url 'bots/bot_integrations/google_dialog_flow_integration' %}" class="btn btn-info" role="button">Bot Integrations</a>
+
+          <div id="piechart" style="width: 440px; height: 300px;"></div>
+        </div>
+
+        <div class="col-sm" style=" float: left; margin-left: 10px; margin-top: 32px; height: 300px; width: 200px; background-color: white; padding: 27px; border-radius: 17px; border: 7px solid whitesmoke;">
+          <h2><b>Kompose</b></h2>
+          <div id="bar_chart_id" style="width: 600px; height: 300px;"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm" style="float: left; margin-top: 32px; height: 300px; width: 200px; background-color: white; padding: 27px; border-radius: 17px; border: 7px solid whitesmoke;">
+          <h2><b>Amazon Lex</b></h2>
+          <div id="piechart" style="width: 440px; height: 300px;"></div>
+        </div>
+
+        <div class="col-sm" style=" float: left; margin-left: 10px; margin-top: 32px; height: 300px; width: 200px; background-color: white; padding: 27px; border-radius: 17px; border: 7px solid whitesmoke;">
+          <h2><b>Other bot platforms</b></h2>
+          <div id="bar_chart_id" style="width: 600px; height: 300px;"></div>
+        </div>
+      </div>
+
+      
+    </div>
+{% endblock %}
+{% block javascript %}
+{% endblock javascript %}
+

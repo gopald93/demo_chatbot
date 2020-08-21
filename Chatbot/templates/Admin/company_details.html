@@ -1,0 +1,33 @@
+{% extends 'Admin/Admin_base.html' %} {% block title %}Welcome messages{% endblock %} {% block stylesheet %} {% endblock stylesheet %} {% load crispy_forms_tags %} {% block content %}
+<div class="container">
+<div class="row mt-1">
+	<div class="col-12">
+		<div class="row mt-1">
+			<div class="col-12">
+				<h3>Company</h3>
+				<h5>Edit your company details</h5>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col-12">
+				<form method="post" novalidate> {% csrf_token %}
+					<div class="row mt-4">
+						<div class="col-12"> {{ form.company_name|as_crispy_field }} </div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-12"> {{ form.company_urls|as_crispy_field }} </div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-12"> {{ form.company_domain_name|as_crispy_field }} </div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-12">
+							<button type="submit" class="btn btn-success">Save</button>
+						</div>
+					</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</form> {% endblock %} {% block javascript %} {% endblock javascript %}
